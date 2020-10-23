@@ -1,0 +1,8 @@
+[
+	{
+		"remote":"github",
+		"repository":"samsungexynos7904/android_kernel_samsung_exynos7904",
+		"target_path":"kernel/samsung/exynos7904",
+		"revision":"twrp"
+	}
+]
