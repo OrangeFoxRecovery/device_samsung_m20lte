@@ -37,7 +37,7 @@ export OF_TWRP_COMPATIBILITY_MODE="1"
 
 # R11
 export FOX_R11="1"
-export FOX_BUILD_TYPE="Beta"
+export FOX_BUILD_TYPE="Stable"
 export FOX_VERSION="R11.1"
 export FOX_ADVANCED_SECURITY="1"
 export OF_USE_TWRP_SAR_DETECT="1"
