@@ -23,6 +23,6 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 PRODUCT_DEVICE := m20lte
 PRODUCT_NAME := omni_m20lte
-PRODUCT_MODEL := Samsung Galaxy M20
-PRODUCT_BRAND := samsung
+PRODUCT_MODEL := Galaxy M20
+PRODUCT_BRAND := Samsung
 PRODUCT_MANUFACTURER := samsung
