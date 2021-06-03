@@ -4,13 +4,13 @@
 
 ```bash
 # Create dirs
-$ mkdir ofox ; cd ofox
+$ mkdir ~/OrangeFox ; cd ~/OrangeFox
 
 # Init repo
 $ repo init --depth=1 -u https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
 
 # Clone m20lte repo
-$ git clone https://gitlab.com/OrangeFox/device/m20lte.git -b fox_9.0 device/samsung/m20lte
+$ git clone https://github.com/Sushrut1101/android_device_samsung_m20lte_OrangeFox.git -b fox_9.0 device/samsung/m20lte
 
 # Sync
 $ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
@@ -18,8 +18,6 @@ $ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optim
 # Build
 $ source build/envsetup.sh ; lunch omni_m20lte-eng ; mka recoveryimage
 ```
-## Credits
-2020 @Astrako
 
-## Contact
-Telegram support group: https://t.me/joinchat/D1Jk_VbieGBXOWZt2y8O7A
+Credits:
+2021 - @Sushrut1101
