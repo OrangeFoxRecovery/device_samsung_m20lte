@@ -80,4 +80,10 @@ export OF_ALLOW_DISABLE_NAVBAR=0
 # use system (ROM) fingerprint where available
 export OF_USE_SYSTEM_FINGERPRINT="1"
 
+# Run Post Format Process for MTP
+export OF_RUN_POST_FORMAT_PROCESS=1
+
+# Misc.
+export OF_CHECK_OVERWRITE_ATTEMPTS=1
+
 add_lunch_combo omni_"$FDEVICE"-eng
