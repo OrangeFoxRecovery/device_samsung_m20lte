@@ -1,7 +1,7 @@
 #
 #	This file is part of the OrangeFox Recovery Project
 # 	Copyright (C) 2019-2020 The OrangeFox Recovery Project
-#	
+#
 #	OrangeFox is free software: you can redistribute it and/or modify
 #	it under the terms of the GNU General Public License as published by
 #	the Free Software Foundation, either version 3 of the License, or
@@ -14,7 +14,7 @@
 #
 # 	This software is released under GPL version 3 or any later version.
 #	See <http://www.gnu.org/licenses/>.
-# 	
+#
 # 	Please maintain this if you use this script or any part of it
 #
 
@@ -30,8 +30,8 @@ export OF_DISABLE_MIUI_SPECIFIC_FEATURES=0
 export OF_FLASHLIGHT_ENABLE="0"
 export OF_SCREEN_H=2340
 export OF_STATUS_H=80
-export OF_STATUS_INDENT_LEFT=48
-export OF_STATUS_INDENT_RIGHT=48
+export OF_STATUS_INDENT_LEFT=55
+export OF_STATUS_INDENT_RIGHT=55
 export OF_TWRP_COMPATIBILITY_MODE=0
 export OF_DEVICE_WITHOUT_PERSIST=1
 
