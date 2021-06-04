@@ -74,6 +74,8 @@ export FOX_USE_ZIP_BINARY="1"
 export FOX_REPLACE_BUSYBOX_PS="1"
 export OF_USE_NEW_MAGISKBOOT="1"
 export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
+export OF_CLOCK_POS=1
+export OF_ALLOW_DISABLE_NAVBAR=0
 
 # use system (ROM) fingerprint where available
 export OF_USE_SYSTEM_FINGERPRINT="1"
