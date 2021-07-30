@@ -20,4 +20,5 @@ $ source build/envsetup.sh ; lunch omni_m20lte-eng ; mka recoveryimage
 ```
 
 Credits:
+2020 - @Astrako
 2021 - @Sushrut1101
