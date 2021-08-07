@@ -25,6 +25,7 @@ export TARGET_DEVICE_ALT="m20lte"
 export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/RECOVERY"
 export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/SYSTEM"
 export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/VENDOR"
+export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/BOOT"
 export OF_AB_DEVICE=0
 export OF_DISABLE_MIUI_SPECIFIC_FEATURES=0
 export OF_FLASHLIGHT_ENABLE="0"
