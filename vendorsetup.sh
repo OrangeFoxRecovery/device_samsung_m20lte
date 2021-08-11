@@ -36,11 +36,11 @@ export OF_STATUS_INDENT_RIGHT=55
 export OF_TWRP_COMPATIBILITY_MODE=0
 export OF_DEVICE_WITHOUT_PERSIST=1
 
-
 # R11
 export FOX_R11="1"
-export FOX_VERSION="R11.1_0"
-export OF_MAINTAINER="Sushrut Gupta"
+export FOX_VERSION="R11.1"
+export OF_MAINTAINER="Sushrut1101"
+export OF_MAINTAINER_AVATAR="misc/Sushrut1101.png"
 export FOX_ADVANCED_SECURITY="1"
 export OF_USE_TWRP_SAR_DETECT="1"
 export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
@@ -77,6 +77,8 @@ export OF_USE_NEW_MAGISKBOOT="1"
 export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
 export OF_CLOCK_POS=1
 export OF_ALLOW_DISABLE_NAVBAR=0
+
+export FOX_BUILD_TYPE="Stable"
 
 # use system (ROM) fingerprint where available
 export OF_USE_SYSTEM_FINGERPRINT="1"
