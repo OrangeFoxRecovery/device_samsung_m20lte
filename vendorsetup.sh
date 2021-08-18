@@ -89,4 +89,7 @@ export OF_RUN_POST_FORMAT_PROCESS=1
 # Misc.
 export OF_CHECK_OVERWRITE_ATTEMPTS=1
 
+# Create Odin Flashable .tar files
+export OF_NO_SAMSUNG_SPECIAL=0
+
 add_lunch_combo omni_"$FDEVICE"-eng
