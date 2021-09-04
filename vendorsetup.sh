@@ -106,6 +106,25 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 	# Create Odin Flashable .tar files
 	export OF_NO_SAMSUNG_SPECIAL=0
+	
+	# OF_MAINTAINER_AVATAR Setup
+    if [ -n "$OF_MAINTAINER_AVATAR" ]; then
+        if [ ! -f "$OF_MAINTAINER_AVATAR" ]; then
+              # some colour codes
+              RED='\033[0;31m'
+              GREEN='\033[0;32m'
+              ORANGE='\033[0;33m'
+              BLUE='\033[0;34m'
+              PURPLE='\033[0;35m'
+              echo -e "${RED}-- File \"$OF_MAINTAINER_AVATAR\" not found  ...${NC}"
+              echo -e "${ORANGE}-- Downloading...${NC}"
+              mkdir -p misc
+              curl https://raw.githubusercontent.com/OrangeFoxRecovery/avatar/fox/Sushrut1101.png >> $OF_MAINTAINER_AVATAR
+              echo -e "${BLUE}-- Successfully Downloaded the Avatar Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
+              echo -e "${PURPLE}-- Using A Custom Maintainer Avatar from the Downloaded Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
+              echo -e "${GREEN}-- Done!"
+        fi
+    fi
 
 	# Let's See what are our Build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
