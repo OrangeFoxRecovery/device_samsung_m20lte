@@ -19,8 +19,8 @@
 # mount_point   fstype   device                 device2              	        flags
 
 /boot		    emmc	/dev/block/platform/13500000.dwmmc0/by-name/BOOT	    flags=display="Boot";backup=1;flashimg=1
-/cache		    ext4	/dev/block/platform/13500000.dwmmc0/by-name/CACHE       flags=display="Cache"
 /recovery	    emmc	/dev/block/platform/13500000.dwmmc0/by-name/RECOVERY    flags=display="Recovery";backup=1;flashimg=1
+/cache		    ext4	/dev/block/platform/13500000.dwmmc0/by-name/CACHE       flags=display="Cache"
 /data		    f2fs	/dev/block/platform/13500000.dwmmc0/by-name/USERDATA    flags=display="Data";encryptable=footer;length=-20480;fileencryption=ice
 
 # Internal storage
