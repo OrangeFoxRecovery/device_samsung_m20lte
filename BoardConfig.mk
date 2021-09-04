@@ -103,3 +103,7 @@ TW_INCLUDE_FUSE_NTFS := true
 
 # Vendor separation
 TARGET_COPY_OUT_VENDOR := vendor
+
+# Download Mode
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
