@@ -19,6 +19,9 @@ $ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optim
 $ source build/envsetup.sh ; lunch omni_m20lte-eng ; mka recoveryimage
 ```
 
-Credits:
+### Credits: ###
+___________________
 2020 - @Astrako
+
 2021 - @Sushrut1101
+____________________
