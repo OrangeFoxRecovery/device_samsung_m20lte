@@ -73,6 +73,7 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+LZMA_RAMDISK_TARGETS := recovery
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
