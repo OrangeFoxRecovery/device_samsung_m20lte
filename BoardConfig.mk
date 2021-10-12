@@ -81,7 +81,6 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 AB_OTA_UPDATER := false
 
 # TWRP specific build flags
-TARGET_OTA_ASSERT_DEVICE := m20lte
 RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
