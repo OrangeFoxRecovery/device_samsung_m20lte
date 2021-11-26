@@ -49,7 +49,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_AB_DEVICE=0
 	export OF_DISABLE_MIUI_SPECIFIC_FEATURES=0
 	export OF_FLASHLIGHT_ENABLE="1"
-	export OF_FL_PATH1="/system/flashlight"
+	export OF_FL_PATH1="/sbin/flashlight"
 	export OF_TWRP_COMPATIBILITY_MODE=0
 	export OF_DEVICE_WITHOUT_PERSIST=1
 	export OF_SKIP_FBE_DECRYPTION=1
