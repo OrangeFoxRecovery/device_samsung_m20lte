@@ -26,7 +26,7 @@
 # Internal storage
 /storage        ext4   	/data/media/0                  		     		        flags=display="Internal Storage";usermrf;backup=1;fsflags="bind";removable
 
-/system_root    ext4	/dev/block/platform/13500000.dwmmc0/by-name/SYSTEM      flags=display="System";backup=1
+/system         ext4	/dev/block/platform/13500000.dwmmc0/by-name/SYSTEM      flags=display="System";backup=1
 /system_image   emmc    /dev/block/platform/13500000.dwmmc0/by-name/SYSTEM		flags=display="System Image";backup=1;flashimg=1
 /vendor		    ext4	/dev/block/platform/13500000.dwmmc0/by-name/VENDOR      flags=display="Vendor";backup=1;wipeingui
 /vendor_image   emmc    /dev/block/platform/13500000.dwmmc0/by-name/VENDOR  	flags=display="Vendor Image";backup=1;flashimg=1
