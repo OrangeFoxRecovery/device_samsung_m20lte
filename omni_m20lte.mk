@@ -15,15 +15,18 @@
 # limitations under the License.
 #
 
-PRODUCT_RELEASE_NAME := m20lte
+PRODUCT_RELEASE_NAME := Samsung Galaxy M20
 
 $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/omni/config/common.mk)
 
+# Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m20lte
 PRODUCT_NAME := omni_m20lte
-PRODUCT_MODEL := Galaxy M20
-PRODUCT_BRAND := Samsung
+PRODUCT_MODEL := SM-M205F
+PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
+
+PRODUCT_GMS_CLIENTID_BASE := android-samsung
