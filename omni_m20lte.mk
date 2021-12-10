@@ -1,5 +1,5 @@
 #
-# Copyright 2017 The Android Open Source Project
+# Copyright (C) 2017 The Android Open Source Project
 # Copyright (C) 2021 The OrangeFox Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");

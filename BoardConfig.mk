@@ -1,7 +1,6 @@
 #
-# Copyright 2017 The Android Open Source Project
-#
-# Copyright (C) 2018-2021 OrangeFox Recovery Project
+# Copyright (C) 2017 The Android Open Source Project
+# Copyright (C) 2018-2021 The OrangeFox Recovery Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,7 +16,6 @@
 #
 
 DEVICE_PATH := device/samsung/m20lte
-KERNEL_PATH := $(DEVICE_PATH)/prebuilt
 
 # Architecture
 TARGET_ARCH := arm64
@@ -54,14 +52,20 @@ TW_INCLUDE_FBE := true
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_PREBUILT_DTIMAGE := $(KERNEL_PATH)/dt.img
-TARGET_PREBUILT_KERNEL := $(KERNEL_PATH)/kernel
+TARGET_PREBUILT_DTIMAGE := $(DEVICE_PATH)/prebuilt/dt.img
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
-# Extracted with libbootimg
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --dt $(TARGET_PREBUILT_DTIMAGE)
+BOARD_MKBOOTIMG_ARGS := \
+	--kernel_offset 0x00008000 \
+	--ramdisk_offset 0x01000000 \
+	--tags_offset 0x00000100 \
+	--dt $(TARGET_PREBUILT_DTIMAGE)
+
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_IMAGE_NAME := Image dtb.img
+BOARD_KERNEL_IMAGE_NAME := \
+	Image \
+	dtb.img
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -69,16 +73,17 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
+# Workaround to fix Vendor Copying error
+TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 LZMA_RAMDISK_TARGETS := recovery
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
-AB_OTA_UPDATER := false
 
 # TWRP specific build flags
 RECOVERY_SDCARD_ON_DATA := true
@@ -95,18 +100,11 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-# exFAT FS Support
-TW_INCLUDE_FUSE_EXFAT := true
-
-# NTFS Support
-TW_INCLUDE_FUSE_NTFS := true
-
-# Vendor separation
-TARGET_COPY_OUT_VENDOR := vendor
-
-# Download Mode
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
+
+TW_INCLUDE_FUSE_EXFAT := true
+TW_INCLUDE_FUSE_NTFS := true
 
 # Platform Info
 PLATFORM_VERSION := 16.1.0

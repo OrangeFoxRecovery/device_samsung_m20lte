@@ -15,10 +15,8 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/m20lte
-
-include $(call all-makefiles-under,$(LOCAL_PATH))
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_m20lte.mk
+PRODUCT_MAKEFILES := \
+    $(LOCAL_DIR)/omni_m20lte.mk
 
 COMMON_LUNCH_CHOICES := \
     omni_m20lte-eng
