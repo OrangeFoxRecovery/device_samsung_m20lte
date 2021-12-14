@@ -47,7 +47,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/VENDOR"
 	export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/BOOT"
 	export OF_FLASHLIGHT_ENABLE="1"
-	export OF_FL_PATH1="/sbin/flashlight"
+	export OF_FL_PATH1="/system/flashlight"
 	export OF_DEVICE_WITHOUT_PERSIST=1
 	export OF_SKIP_FBE_DECRYPTION=1
 	
@@ -89,7 +89,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 	export FOX_USE_BASH_SHELL="1"
 	export FOX_ASH_IS_BASH="1"
-	export FOX_USE_NANO_EDITOR="1"
 	export FOX_USE_TAR_BINARY="1"
 	export FOX_USE_ZIP_BINARY="1"
 	export FOX_REPLACE_BUSYBOX_PS="1"
@@ -131,7 +130,5 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
    	   export | grep "TARGET_" >> $FOX_BUILD_LOG_FILE
   	   export | grep "TW_" >> $FOX_BUILD_LOG_FILE
  	fi
-
-	add_lunch_combo omni_"$FDEVICE"-eng
 fi
 #

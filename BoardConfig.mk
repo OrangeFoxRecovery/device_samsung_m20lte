@@ -43,8 +43,6 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Crypto
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
-TARGET_HW_DISK_ENCRYPTION := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE := true
@@ -78,7 +76,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Recovery
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/etc/recovery.fstab
 LZMA_RAMDISK_TARGETS := recovery
 
 # System as root
