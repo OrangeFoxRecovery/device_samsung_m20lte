@@ -16,7 +16,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_m20lte.mk
+    $(LOCAL_DIR)/twrp_m20lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_m20lte-eng
+    twrp_m20lte-eng

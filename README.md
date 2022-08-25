@@ -16,7 +16,7 @@ $ git clone https://gitlab.com/OrangeFox/device/m20lte.git -b fox_9.0 device/sam
 $ repo sync --no-repo-verify -c --force-sync --no-clone-bundle --no-tags --optimized-fetch --prune -j`nproc`
 
 # Build
-$ source build/envsetup.sh ; lunch omni_m20lte-eng ; mka recoveryimage
+$ source build/envsetup.sh ; lunch twrp_m20lte-eng ; mka recoveryimage
 ```
 
 ### Credits: ###
