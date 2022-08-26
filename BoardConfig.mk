@@ -84,6 +84,9 @@ LZMA_RAMDISK_TARGETS := recovery
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
+# Fastbootd
+TW_INCLUDE_FASTBOOTD := true
+
 # TWRP specific build flags
 RECOVERY_SDCARD_ON_DATA := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
