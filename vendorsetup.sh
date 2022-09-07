@@ -38,7 +38,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER="1"
 	
 	# m20lte specific
-	export TARGET_DEVICE_ALT="m20lte"
 	export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/RECOVERY"
 	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
 	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
@@ -47,6 +46,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_FL_PATH1="/system/flashlight"
 	export OF_DEVICE_WITHOUT_PERSIST=1
 	export OF_SKIP_FBE_DECRYPTION=1
+	export OF_VANILLA_BUILD="1"
+	export FOX_USE_LZMA_COMPRESSION="1"
 	
 	# Screen Settings
 	export OF_SCREEN_H=2340
@@ -61,13 +62,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_MAINTAINER="Sushrut1101"
 	export FOX_BUILD_TYPE="Beta"
 	export FOX_VARIANT="Dynamic"
-	
-	export FOX_ADVANCED_SECURITY="1"
-	export OF_USE_TWRP_SAR_DETECT="1"
-	export OF_SUPPORT_ALL_BLOCK_OTA_UPDATES=1
-	export OF_DISABLE_MIUI_OTA_BY_DEFAULT=0
-	export OF_FIX_OTA_UPDATE_MANUAL_FLASH_ERROR=1
-	export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
 
 	# Quick Backup Defaults
 	export OF_QUICK_BACKUP_LIST="/boot;/data;"
@@ -76,12 +70,11 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export TARGET_ARCH=arm64
 	export TW_DEFAULT_LANGUAGE="en"
 	export OF_KEEP_FORCED_ENCRYPTION="1"
-	export OF_PATCH_AVB20="1"
 	export OF_USE_MAGISKBOOT="1"
 	export OF_USE_MAGISKBOOT_FOR_ALL_PATCHES="1"
 	export OF_DONT_PATCH_ENCRYPTED_DEVICE="1"
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
-	export FOX_USE_LZMA_COMPRESSION="1"
+	export FOX_ADVANCED_SECURITY="1"
 	
 	export FOX_USE_BASH_SHELL="1"
 	export FOX_ASH_IS_BASH="1"
