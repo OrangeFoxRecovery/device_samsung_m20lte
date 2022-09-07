@@ -17,6 +17,8 @@
 LOCAL_PATH := device/samsung/m20lte
 
 # Fastbootd
+TW_INCLUDE_FASTBOOTD := true
+
 PRODUCT_PACKAGES += \
 	fastbootd \
 	android.hardware.fastboot@1.0-impl-mock \
