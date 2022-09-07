@@ -1,22 +1,19 @@
 #
-#	This file is part of the OrangeFox Recovery Project
-# 	Copyright (C) 2019-2021 The OrangeFox Recovery Project
+# Copyright (C) 2022 The OrangeFox Recovery Project
 #
-#	OrangeFox is free software: you can redistribute it and/or modify
-#	it under the terms of the GNU General Public License as published by
-#	the Free Software Foundation, either version 3 of the License, or
-#	any later version.
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-#	OrangeFox is distributed in the hope that it will be useful,
-#	but WITHOUT ANY WARRANTY; without even the implied warranty of
-#	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#	GNU General Public License for more details.
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
-# 	This software is released under GPL version 3 or any later version.
-#	See <http://www.gnu.org/licenses/>.
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 #
-# 	Please maintain this if you use this script or any part of it
-#
+
 FDEVICE="m20lte"
 
 fox_get_target_device() {
@@ -61,9 +58,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 	# R11.1 Settings
 	export FOX_R11="1"
-	export FOX_VERSION="R11.1"
+	export FOX_VERSION="R11.1_1"
 	export OF_MAINTAINER="Sushrut1101"
-	export OF_MAINTAINER_AVATAR="misc/Sushrut1101.png"
 	export FOX_BUILD_TYPE="Stable"
 	
 	export FOX_ADVANCED_SECURITY="1"
@@ -103,25 +99,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	
 	# Create Odin Flashable .tar files
 	export OF_NO_SAMSUNG_SPECIAL=0
-	
-	# OF_MAINTAINER_AVATAR Setup
-    if [ -n "$OF_MAINTAINER_AVATAR" ]; then
-        if [ ! -f "$OF_MAINTAINER_AVATAR" ]; then
-              # some colour codes
-              RED='\033[0;31m'
-              GREEN='\033[0;32m'
-              ORANGE='\033[0;33m'
-              BLUE='\033[0;34m'
-              PURPLE='\033[0;35m'
-              echo -e "${RED}-- File \"$OF_MAINTAINER_AVATAR\" not found  ...${NC}"
-              echo -e "${ORANGE}-- Downloading...${NC}"
-              mkdir -p misc
-              curl https://raw.githubusercontent.com/OrangeFoxRecovery/avatar/fox/Sushrut1101.png >> $OF_MAINTAINER_AVATAR
-              echo -e "${BLUE}-- Successfully Downloaded the Avatar Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
-              echo -e "${PURPLE}-- Using A Custom Maintainer Avatar from the Downloaded Image \"$OF_MAINTAINER_AVATAR\" ...${NC}"
-              echo -e "${GREEN}-- Done!"
-        fi
-    fi
 
 	# Let's See what are our Build VARs
 	if [ -n "$FOX_BUILD_LOG_FILE" -a -f "$FOX_BUILD_LOG_FILE" ]; then
