@@ -40,8 +40,8 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	# m20lte specific
 	export TARGET_DEVICE_ALT="m20lte"
 	export FOX_RECOVERY_INSTALL_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/RECOVERY"
-	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/SYSTEM"
-	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/VENDOR"
+	export FOX_RECOVERY_SYSTEM_PARTITION="/dev/block/mapper/system"
+	export FOX_RECOVERY_VENDOR_PARTITION="/dev/block/mapper/vendor"
 	export FOX_RECOVERY_BOOT_PARTITION="/dev/block/platform/13500000.dwmmc0/by-name/BOOT"
 	export OF_FLASHLIGHT_ENABLE="1"
 	export OF_FL_PATH1="/system/flashlight"
@@ -70,7 +70,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export OF_OTA_BACKUP_STOCK_BOOT_IMAGE=1
 
 	# Quick Backup Defaults
-	export OF_QUICK_BACKUP_LIST="/boot;/data;/system_image;/vendor_image;"
+	export OF_QUICK_BACKUP_LIST="/boot;/data;"
 	
 	# Common
 	export TARGET_ARCH=arm64
@@ -90,9 +90,6 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
 	export FOX_REPLACE_BUSYBOX_PS="1"
 	export OF_USE_NEW_MAGISKBOOT="1"
 	export OF_SKIP_MULTIUSER_FOLDERS_BACKUP="1"
-	
-	# Use the System (ROM) Fingerprint where Available
-	export OF_USE_SYSTEM_FINGERPRINT="1"
 
 	# Run Post Format Process for MTP
 	export OF_RUN_POST_FORMAT_PROCESS=1
