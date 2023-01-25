@@ -1,0 +1,8 @@
+[
+	{
+		"remote"	:	"LineageOS",
+		"repository"	:	"android_system_tools_mkbootimg",
+		"target_path"	:	"system/tools/mkbootimg",
+		"branch"	:	"lineage-19.1"
+	}
+]
