@@ -20,9 +20,8 @@ LOCAL_PATH := device/samsung/m20lte
 TW_INCLUDE_FASTBOOTD := true
 
 PRODUCT_PACKAGES += \
-	fastbootd \
-	android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery
+	android.hardware.fastboot@1.1-impl-mock \
+	fastbootd
 
 PRODUCT_PRODUCT_PROPERTIES += \
 	ro.fastbootd.available=true
